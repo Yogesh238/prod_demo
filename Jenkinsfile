@@ -3,7 +3,6 @@ pipeline {
     agent any
   stages {
               stage ('email'){
-                        steps {
         always {
            emailext (
   subject: "Waiting for your Approval! Job: '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
@@ -13,24 +12,24 @@ pipeline {
 )
         }
       } 
-    }
-         stage("Stage with input") {
-    steps {
-  //    def userInput = false
-        script {
-            def userInput = input(id: 'Proceed1', message: 'Promote build?', parameters: [[$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']])
-            echo 'userInput: ' + userInput
+//          stage("Stage with input") {
+//     steps {
+//       def userInput = false
+//         script {
+//             def userInput = input(id: 'Proceed1', message: 'Promote build?', parameters: [[$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']])
+//             echo 'userInput: ' + userInput
 
-            if(userInput == true) {
-                // do action
-            } else {
-                // not do action
-                echo "Action was aborted."
-            }
+//             if(userInput == true) {
+//                 // do action
+//               echo "pass"
+//             } else {
+//                 // not do action
+//                 echo "Action was aborted."
+//             }
 
-        }    
-    }  
-         }
+//         }    
+//     }  
+//          }
 //     post {
 //         always {
 //            emailext (
