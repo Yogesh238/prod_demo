@@ -13,7 +13,7 @@ pipeline {
                 }
           } 
   }
-      
+}      
               
 //          stage("Stage with input") {
 //     steps {
@@ -42,6 +42,3 @@ pipeline {
 //  recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']]
 // )
 //         }
-    }
-      
-}
