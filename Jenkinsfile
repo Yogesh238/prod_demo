@@ -1,8 +1,8 @@
   
 pipeline {
     agent any
-  stages {   
-  }
+//   stages {   
+//   }
   post{
         always {
            emailext (
