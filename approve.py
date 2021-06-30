@@ -6,7 +6,7 @@ import requests
 
 
 RECIPIENT = "sachin.saini@cloverbaytechnologies.com"
-SENDER = "yogesh.p@cloverbaytechnologies.com"
+#SENDER = "yogesh.p@cloverbaytechnologies.com"
 AWS_REGION = "us-east-1"
 CHARSET = "UTF-8"
 
