@@ -1,7 +1,9 @@
   
 pipeline {
     agent any
-  stages {       
+  stages {   
+  }
+  post{
         always {
            emailext (
   subject: "Waiting for your Approval! Job: '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
