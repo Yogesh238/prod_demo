@@ -1,7 +1,12 @@
   
 pipeline {
     agent any
-      post {
+
+        }
+    }
+  stages {
+              stage ('email){
+                        steps {
         always {
            emailext (
   subject: "Waiting for your Approval! Job: '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
@@ -10,8 +15,8 @@ pipeline {
  recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']]
 )
         }
+      } 
     }
-  stages {
          stage("Stage with input") {
     steps {
   //    def userInput = false
@@ -28,8 +33,7 @@ pipeline {
 
         }    
     }  
-} 
-    }
+         }
 //     post {
 //         always {
 //            emailext (
