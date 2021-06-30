@@ -7,6 +7,7 @@ pipeline {
                 echo "Ok"
             }
         }
+  }
   post{
         always {
            emailext (
