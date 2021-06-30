@@ -2,7 +2,7 @@
 pipeline {
     agent any
 
-        }
+        
     }
   stages {
               stage ('email){
@@ -43,6 +43,6 @@ pipeline {
 //  recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']]
 // )
 //         }
-//     }
+    }
       
 }
