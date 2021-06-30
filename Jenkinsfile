@@ -5,7 +5,7 @@ pipeline {
         
     }
   stages {
-              stage ('email){
+              stage ('email'){
                         steps {
         always {
            emailext (
