@@ -5,7 +5,7 @@ pipeline {
         stage('Ok') {
             steps {
               echo %BUILD_NUMBER%
-            }
+            
         }
   }
 }
